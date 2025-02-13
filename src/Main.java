@@ -1,18 +1,18 @@
 package src;
 
-import java.util.Stack;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 public class Main {
     public static void main(String[] args) {
-        Stack<String> stack = new Stack<String>();
+    Queue<Double> queue = new PriorityQueue<>();
 
-        stack.push("Theory of Relativity");
-        stack.push("Universe");
-        stack.push("Grokking Algorithms");
-        stack.push("Atomic Habits");
-
-        String myFavBook = stack.pop();
-        System.out.println(stack);
-        System.out.println(myFavBook);
+    queue.offer(2.1);
+    queue.offer(3.2);
+    queue.offer(4.0);
+    queue.offer(3.8);
+    while(!queue.isEmpty()){
+        System.out.println(queue.poll());
+    }
     }
 }
